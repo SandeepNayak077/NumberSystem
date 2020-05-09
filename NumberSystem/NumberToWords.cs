@@ -23,8 +23,6 @@ namespace NumberSystem
 
         public static string Convert(long number)
         {
-            StringBuilder words = new StringBuilder();
-
             if (number == 0)
             {
                 return _smallNumbers[0];
@@ -36,6 +34,7 @@ namespace NumberSystem
                 return "Minus " + Convert(Math.Abs(number));
             }
 
+            StringBuilder words = new StringBuilder();
             if (number / MILLION > 0)
             {
                 words.Append(Convert(number / MILLION) + " Million");
