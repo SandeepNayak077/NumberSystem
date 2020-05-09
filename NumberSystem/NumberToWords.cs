@@ -30,6 +30,12 @@ namespace NumberSystem
                 return _smallNumbers[0];
             }
 
+            // Negative numbers
+            if (number < 0)
+            {
+                return "Minus " + Convert(Math.Abs(number));
+            }
+
             if (number / MILLION > 0)
             {
                 words.Append(Convert(number / MILLION) + " Million");
