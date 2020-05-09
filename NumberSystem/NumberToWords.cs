@@ -32,20 +32,35 @@ namespace NumberSystem
 
             if (number / MILLION > 0)
             {
-                words.Append(Convert(number / MILLION) + " Million, ");
+                words.Append(Convert(number / MILLION) + " Million");
                 number %= MILLION;
+
+                if (number > 0)
+                {
+                    words.Append(", ");
+                }
             }
 
             if (number / THOUSAND > 0)
             {
-                words.Append(Convert(number / THOUSAND) + " Thousand, ");
+                words.Append(Convert(number / THOUSAND) + " Thousand");
                 number %= THOUSAND;
+
+                if (number > 0)
+                {
+                    words.Append(", ");
+                }
             }
 
             if (number / HUNDRED > 0)
             {
-                words.Append(Convert(number / HUNDRED) + " Hundred ");
+                words.Append(Convert(number / HUNDRED) + " Hundred");
                 number %= HUNDRED;
+
+                if (number > 0)
+                {
+                    words.Append(" ");
+                }
             }
 
             if (number > 0)
