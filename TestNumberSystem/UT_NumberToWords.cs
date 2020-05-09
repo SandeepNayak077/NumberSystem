@@ -62,6 +62,46 @@ namespace TestNumberSystem
             string actualResult = NumberToWords.Convert(315121810);
             string expectedResult = "Three hundred and fifteen million, one hundred and twenty-one thousand, eight hundred and ten";
             Assert.AreEqual(expectedResult, actualResult, true);
-        }        
+        }
+
+        [TestMethod]
+        public void T0008_Spells_0_In_International_Numbering_System()
+        {
+            string actualResult = NumberToWords.Convert(4132316);
+            string expectedResult = "Zero";
+            Assert.AreEqual(expectedResult, actualResult, true);
+        }
+
+        [TestMethod]
+        public void T0009_Spells_10_In_International_Numbering_System()
+        {
+            string actualResult = NumberToWords.Convert(25212423);
+            string expectedResult = "Ten";
+            Assert.AreEqual(expectedResult, actualResult, true);
+        }
+
+        [TestMethod]
+        public void T0010_Spells_100_In_International_Numbering_System()
+        {
+            string actualResult = NumberToWords.Convert(315121810);
+            string expectedResult = "One Hundred";
+            Assert.AreEqual(expectedResult, actualResult, true);
+        }
+
+        [TestMethod]
+        public void T0011_Spells_1000_In_International_Numbering_System()
+        {
+            string actualResult = NumberToWords.Convert(4132316);
+            string expectedResult = "One thousand";
+            Assert.AreEqual(expectedResult, actualResult, true);
+        }
+
+        [TestMethod]
+        public void T0012_Spells_1000000_In_International_Numbering_System()
+        {
+            string actualResult = NumberToWords.Convert(25212423);
+            string expectedResult = "One million";
+            Assert.AreEqual(expectedResult, actualResult, true);
+        }
     }
 }
