@@ -103,5 +103,13 @@ namespace TestNumberSystem
             string expectedResult = "One million";
             Assert.AreEqual(expectedResult, actualResult, true);
         }
+
+        [TestMethod]
+        public void T0013_Spells_Negative_Number_In_International_Numbering_System()
+        {
+            string actualResult = NumberToWords.Convert(-1234);
+            string expectedResult = "Minus One Thousand, Two Hundred and Thirty-Four";
+            Assert.AreEqual(expectedResult, actualResult, true);
+        }
     }
 }
